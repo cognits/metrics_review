@@ -1,0 +1,104 @@
+/* General Padding and Background Color of the WebSite */
+html,body{
+    padding: 10px;
+	background-color: #fff;
+}
+/* Width of the Udacity image 'report.html file' */
+.udacityreport{
+	width: 150px;
+}
+/* Width of the Udacity image 'index.html file' */
+.udacitygeneral{
+    width: 80px;
+}
+/* Footer of the index.html file */
+footer{
+    background-color: #272727;
+    height: 120px;
+    width: 960px;
+    margin:400px auto 0;
+}
+/* Credits in the footer section */
+.credits{
+    color: white;
+    float: right;
+    margin-top: 30px;
+}
+/* Cognits image in the footer section */
+.cognits-logo{
+    float: right;
+    height: 30px;
+}
+/* Text 'Programación Creativa in the index.html' as title */
+h4{
+    margin-top: -50px;
+    margin-left: 90px;
+}
+/* Nav List-Menu of the 'index.html' for access to report.html*/
+ul, ol {
+	list-style:none;
+}
+.nav > li {
+	float:left;
+}
+/* Button Nav Characteristic */
+.nav li a {
+	background-color:#3e9019;
+	color:#fff;
+	text-decoration:none;
+	padding:10px 12px;
+	display:block;
+	border-radius: 2px;
+}
+.nav li a:hover {
+	background-color:#434343;
+}
+.nav li ul {
+	display:none;
+	position:absolute;
+	min-width:140px;
+}
+/* Sub-Menu of the Button Nav */
+.nav li:hover > ul {
+	display:block;
+}
+.nav li ul li {
+	position:relative;
+}
+.nav li ul li ul {
+	right:-140px;
+	top:0px;
+}
+/* Udacity Report Title of the 'report.html' file */
+.udacityreporttitle{
+	font-size: 25px;
+	font-family: Aria, sans-serif
+}
+/* Container that include the circles with totals of times */
+.codereviewreport{
+	padding: 1em;
+	background-color: #EFD52A;
+}
+/* Circles of the report 'total line code, total QA time and total projects review' */
+.circle{
+	border: 1px solid white;
+	color: white;
+	background-color: black;
+	border-radius: 100px;
+	height: 150px;
+	text-align: center;
+}
+/* Max Time Figure */
+.maxtime{
+	width: 200px;
+	height: 200px;
+	border: 1px solid gray;
+	border-radius: 100px;
+	margin-top: 60px;
+	text-align: center;
+}
+/* Footer of the 'report.html' file */
+.end{
+	background-color: #EB362B;
+	height: 150px;
+}
