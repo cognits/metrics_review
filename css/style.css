@@ -81,10 +81,10 @@ ul, ol {
 }
 /* Circles of the report 'total line code, total QA time and total projects review' */
 .circle{
-	border: 1px solid white;
+	border: 1px solid black;
 	color: white;
 	background-color: black;
-	border-radius: 100px;
+	border-radius: 150px;
 	height: 150px;
 	text-align: center;
 }
@@ -96,6 +96,7 @@ ul, ol {
 	border-radius: 100px;
 	margin-top: 60px;
 	text-align: center;
+	background-color: #EFD52A;
 }
 /* Footer of the 'report.html' file */
 .end{
