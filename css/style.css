@@ -1,105 +1,366 @@
-/* General Padding and Background Color of the WebSite */
-html,body{
-    padding: 10px;
-	background-color: #fff;
+
+/*Delete margin and general padding*/
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
-/* Width of the Udacity image 'report.html file' */
-.udacityreport{
-	width: 150px;
+/*Width of header (index.html) file*/
+header{
+    width: 100%;
 }
-/* Width of the Udacity image 'index.html file' */
-.udacitygeneral{
-    width: 80px;
+/*Nav bar*/
+nav{
+    margin: 1px auto;
+    width: 100%;
 }
-/* Footer of the index.html file */
-footer{
-    background-color: #272727;
-    height: 120px;
-    width: 960px;
-    margin:400px auto 0;
+/*Nav Bar Style*/
+nav ul{
+    list-style: none;
 }
-/* Credits in the footer section */
-.credits{
+nav > ul{
+    display: table;
+    overflow: hidden;
+    width: 100%;
+    background-color: #5f5959;
+    position: relative;
+}
+/*list items Autoajustable*/
+nav > ul li{
+    display: table-cell;
+}
+/*Transition for mousemove list items*/
+nav > ul li a{
     color: white;
-    float: right;
-    margin-top: 30px;
+    display: block;
+    line-height: 20px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    /*Transition for list animation*/
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
 }
-/* Cognits image in the footer section */
-.cognits-logo{
-    float: right;
-    height: 30px;
+nav > ul > li > ul > li a:hover{
+    background-color: white;
 }
-/* Text 'Programación Creativa in the index.html' as title */
-h4{
-    margin-top: -50px;
-    margin-left: 90px;
+/**/
+nav > ul > li > a span {
+    background-color: white;
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: -55px;
+    /*Transition for list animation*/
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
 }
-/* Nav List-Menu of the 'index.html' for access to report.html*/
-ul, ol {
+/*Center Icon nav bar*/
+nav > ul > li > a span .icon {
+    display: block;
+    line-height: 60px;
+}
+nav > ul > li > a:hover > span {
+    top: 0;
+}
+/*Colors*/
+nav ul li a span.home{
+    background-color: #0e5061;
+    color: white;
+}
+nav ul li a span.udacity{
+    background-color: #5da5a2;
+    color: white;
+}
+nav ul li a span.googleform{
+    background-color: #f25724;
+    color: white;
+}
+nav ul li a span.slack{
+    background-color: #174459;
+    color: white;
+}
+nav ul li a span.reviewers{
+    background-color: #37a4d9;
+    color: white;
+}
+nav ul li a span.statistics{
+    background-color: #2ea240;
+    color: white;
+}
+/*Link Color click*/
+a:visited{
+    color: white;
+}
+/*Text decoration of <a></a> tag*/
+a:link{
+    text-decoration: none;
+}
+.transparentbox{
+    margin-top: 15px;
+    border: 1px dotted gray;
+    height: 450px;
+    text-align: center;
+    background-color: rgba(193, 185, 185, 0.65);
+}
+/*Udacity Image*/
+.udacityimage{
+    width: 220px;
+}
+/*Text "Code Review Report" top*/
+.top{
+    margin-top: -5px;
+}
+/*Container with gradient background*/
+.totalgradient{
+    border: 1px dotted gray;
+    background: url("../images/b_gradient2_1024.png") no-repeat fixed;
+    background-size: 100% 100%;
+    padding: 60px;
+}
+.totalwidth{
+    width: 100%;
+}
+/*Center Circles*/
+.center{
+    text-align: center;
+}
+/*Circles of statistic times*/
+.circle{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid gray;
+    text-align: center;
+    box-shadow: 6px 7px 10px #5f5959;
+}
+/*Results of statistic times*/
+h1{
+    margin-top: 35px;
+    vertical-align: middle;
+}
+/*Cognits Icon*/
+.glyphicon-chevron-right{
+    color: skyblue;
+}
+/*Quality Container*/
+.quality{
+    width: 100%;
+    background-color: #39393B;
+}
+/*Vertical space between Response Time and Quality*/
+.space{
+    padding-top: 20px;
+}
+/*flecha de direccion de Quality*/
+.iconquality{
+    color: #FF4E50;
+}
+/*Color of Quality Text*/
+.qualitycolor{
+    color: white;
+}
+/*Background-color of Footer*/
+.footer{
+    width: 100%;
+    background-color: #2A2B2D;
+}
+/*Footer space for the Cognits image*/
+.footerspace{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+@media screen and (max-width: 765px){
+    .udacityimage{
+        width: 190px;
+    }
+    .containertext{
+        text-align: center;
+    }
+    .footerspace{
+        text-align: center;
+    }
+}
+@media (max-width: 360px){
+    #circulo1{
+        margin-left: -71%;   
+    }
+        #circulo2{
+          margin-left: 3%;
+          margin-top: -55%;
+          position: absolute;
+    }
+    #circulo3{
+        margin-left: -71%;
+        margin-top: 45%;
+    }
+    #circulo4{
+        margin-left: 3%;
+        margin-top: -55%;
+        position: absolute;
+    }
+}
+@media (max-width: 320px){
+    #circulo1{
+        margin-left: -83%;   
+    }
+        #circulo2{
+          margin-left: 3%;
+          margin-top: -65%;
+          position: absolute;
+    }
+    #circulo3{
+        margin-left: -83%;
+        margin-top: 45%;
+    }
+    #circulo4{
+        margin-left: 3%;
+        margin-top: -65%;
+        position: absolute;
+    }
+}
+footer {
+    height: 60px;
+    clear: both;
+    background: #2A2B2D;
+    text-align: center;
+    color: #fff;
+}
+.metricstart{
+    background: -webkit-linear-gradient(45deg,#48AAC3,#E39BA9) no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.item{
+    padding-top: 10px;
+    height: 100%;
+    padding-bottom: 10px;
+}
+.slide{
+    height: 100%;
+}
+.carousel-caption{
+    height: 100px;
+    background: rgba(29, 29, 29, 0.72);
+}
+.carousel-caption > h3{
+    margin-top: 0px;
+}
+@media screen and (max-width: 700px){
+    .carousel-caption{
+        display: none;
+    }
+    .transparentbox{
+        height: 300px;
+    }
+    header{
+        display: none;
+    }
+}
+
+.slides {
+	width:100%;
+    height: 100%;
+}
+ 
+.slides img {
+	width:100%;
+    height: 100%;
+}
+.am-close-backdrop{
+    overflow: hidden;
+    background: -webkit-linear-gradient(45deg,#48AAC3,#E39BA9) no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.center{
+    text-align: center
+}
+.am-back{
+    padding: 5%;
+    text-align: center;
+}
+.am-expanded{
+    position: fixed;
+}
+
+
+ 
+.slides {
+    padding-top: 1.5%;
+	width:100%;
+}
+ 
+.slides img {
+	width:100%;
+}
+ 
+.slidesjs-pagination {
+	background:#424242;
 	list-style:none;
+	overflow:hidden;
 }
-.nav > li {
+ 
+.slidesjs-pagination li {
 	float:left;
 }
-/* Button Nav Characteristic */
-.nav li a {
-	background-color:#3e9019;
+ 
+.slidesjs-pagination li a {
+	display:block;
+	padding:10px 20px;
 	color:#fff;
 	text-decoration:none;
-	padding:10px 12px;
-	display:block;
-	border-radius: 2px;
 }
-.nav li a:hover {
-	background-color:#434343;
+ 
+.slidesjs-pagination li a:hover {
+	background:#000;
 }
-.nav li ul {
-	display:none;
-	position:absolute;
-	min-width:140px;
+ 
+.slides .active {
+	background:#000;
 }
-/* Sub-Menu of the Button Nav */
-.nav li:hover > ul {
-	display:block;
+ 
+.slidesjs-navigation{
+	background:#000;
+	color:#fff;
+	text-decoration:none;
+	display:inline-block;
+	padding:10px 20px;
+	float:right;
 }
-.nav li ul li {
-	position:relative;
+.main{
+    height: 100%;
 }
-.nav li ul li ul {
-	right:-140px;
-	top:0px;
+
+@media (max-width: 408px){
+    .slidesjs-pagination li{
+       	width: 30%;
+    }
 }
-/* Udacity Report Title of the 'report.html' file */
-.udacityreporttitle{
-	font-size: 25px;
-	font-family: Aria, sans-serif
-}
-/* Container that include the circles with totals of times */
-.codereviewreport{
-	padding: 1em;
-	background-color: #EFD52A;
-}
-/* Circles of the report 'total line code, total QA time and total projects review' */
-.circle{
-	border: 1px solid black;
-	color: white;
-	background-color: black;
-	border-radius: 150px;
-	height: 150px;
-	text-align: center;
-}
-/* Max Time Figure */
-.maxtime{
-	width: 200px;
-	height: 200px;
-	border: 1px solid gray;
-	border-radius: 100px;
-	margin-top: 60px;
-	text-align: center;
-	background-color: #EFD52A;
-}
-/* Footer of the 'report.html' file */
-.end{
-	background-color: #EB362B;
-	height: 150px;
+@media (max-width: 320px){
+    .slidesjs-pagination li {
+        width: 25%;
+        font-size: 9px;
+    }
+    .slidesjs-navigation{
+        width: 20%;
+        font-size: 9px;
+        padding:10px 1px;
+    }
 }

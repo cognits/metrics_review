@@ -1,56 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <title>Cognits-Udacity</title>
-    </head>
-    <body>
-        <div class="container wrapper" id="top">
+	<head>
+	<!-- UTF-8 Encoding -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Google Fonts API, type text: kalam -->
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Kalam:700,400|Roboto:400">
+		<!-- Bootstrap Library -->
+		<link rel="stylesheet" href="dist/css/bootstrap.min.css">
+		<!-- Css file "Style of the WebSite" -->
+		<link rel="stylesheet" href="js/libs/adaptive-modal-master/adaptive-modal.css">
+		<link rel="stylesheet" href="css/style.css">
+		<title>Metrics</title>
+	</head>
+    <body class="metricstart">
+        <!-- Header for nav bar -->
+        <header>
+            <nav>
+                <ul>
+                    <!-- Link to Udacity Dashboards -->
+                    <li><a href="https://review.udacity.com/#!/submissions/dashboard"><span class="udacity"><i class="icon glyphicon glyphicon-send"></i></span>Udacity</a></li>
+                    <!-- Link to Google Drive -->
+                    <li><a href="https://drive.google.com/drive/folders/0B6tMOh9xUWegfmswYTYyTTRza2F0Y0ZTXzBDV3BQZjRHRWFwZGJYUjBHV2N2RFc3SnlPZDg"><span class="home"><i class="icon glyphicon glyphicon-hdd"></i></span>Google Drive</a></li>
+                    <!-- Link to Google Form -->
+                    <li><a href="https://docs.google.com/forms/d/1ZyjBvuUwbVf319mPkVRiPa8TSBfFhNULX1P6kYvmr_U/viewform"><span class="googleform"><i class="icon glyphicon glyphicon-pencil"></i></span>Google Form</a></li>
+                    <!-- Link to the private group "udacity-code-review" of Cognits-Team -->
+                    <li><a href="https://cognits-team.slack.com/messages/udacity-code-review/"><span class="slack"><i class="icon glyphicon glyphicon-th-large"></i></span>Slack</a></li>
+                    <!-- Link to Reviewers list -->
+                    <li><a href="templates/reviewers.html"><span class="reviewers"><i class="icon glyphicon glyphicon-user"></i></span>Reviewers</a></li>
+                    <!-- Link to Statistics of review -->
+                    <li><a href="#form" data-toggle="adaptive-modal"><span class="statistics"><i class="icon glyphicon glyphicon-signal"></i></span>Statistics</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Carrousel -->
+        <div class="container space">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 transparentbox main">
+                    <div class="slides">
+                        <img src="images/class-central-bg-udacity.jpg" alt="udacity central">
+                        <img src="images/cognits-notes.png" alt="cognits note" hidden="true">
+                        <img src="images/group-cognits2.png" alt="cognits group" hidden="true">
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+        <!-- End First Container -->
+        <div class="container space">
             <div class="row">
                 <div class="col-md-12">
-                    <header>
-                        <div class="row">
-                            <hgroup>
-                                <img class="img-responsive udacitygeneral" src="images/2000px-Udacity_Logo.svg.png">
-                                <a title="Udacity Code Reviewer" href="https://Udacity.com">
-                                    <h4>Programación Creativa</h4>
-                                </a>
-                            </hgroup>
-                        </div>
-                    </header>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12"></div>
-                        </div>
-                    </div>
-                    <br>
-                    <hr>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-								<ul class="nav">
-									<li><a href="">Opcion</a>
-										<ul>
-											<li><a href="templates/report.html">Statistics</a></li>
-										</ul>
-									</li>
-								</ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Footer -->
-                    <footer>
-                        <p class="credits">Designed in <strong>Guatemala</strong> by
-                            <img class="cognits-logo" src="images/cognits_logo.png">
-                        </p>
-                    </footer>
+                    Notas:
                 </div>
             </div>
         </div>
-    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+        <div class="container">
+            <div class="row">
+                <div id="form" hidden="true">
+                    <h1 class="col-md-12 center">Select Month</h1>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <select class="form-control" id="myCombobox" onchange="myFunction();">
+                                <option value="1">Enero</option>
+                                <option value="2">Febrero</option>
+                                <option value="3">Marzo</option>
+                                <option value="4">Abril</option>
+                                <option value="5">Mayo</option>
+                                <option value="6">Junio</option>
+                                <option value="7">Julio</option>
+                                <option value="8">Agosto</option>
+                                <option value="9">Septiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                            </select>
+                            <br>
+                            <a href="templates/report.html">
+                                <input type="submit" class="btn btn-default" value="Submit">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--************************ SCRIPTS *************************** -->
+        <!-- JQuery Library API -->
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script type="text/javascript" src="js/libs/main.js"></script>
+        <script type="text/javascript" src="js/start.js"></script>
+        <script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery.slides.js"></script>
+        <script type="text/javascript" src="js/libs/adaptive-modal-master/jquery.adaptive-modal.js"></script>
     </body>
 </html>
